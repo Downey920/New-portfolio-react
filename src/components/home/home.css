@@ -5,7 +5,7 @@
 }
 
 .back-to-position.to-left {
-  transform: translateX(200px);
+  transform: translateX(250px);
 }
 
 .back-to-position.to-right {
@@ -48,6 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .home .left {

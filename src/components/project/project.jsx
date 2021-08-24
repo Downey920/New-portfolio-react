@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Project extends Component {
   render() {
-    return <section>Projects</section>;
+    return <section></section>;
   }
 }
 

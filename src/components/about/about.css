@@ -1,0 +1,101 @@
+.about {
+  height: 48em;
+}
+
+.about .title {
+  margin: 2em;
+}
+
+.about .about-1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.about .about-2 {
+  width: 250px;
+  padding: 0.5em;
+  padding-right: 1em;
+}
+
+.about .about-3 {
+  flex-basis: 100%;
+  padding: 0.5em;
+  padding-left: 2em;
+  text-align: start;
+  border-left: 2px solid lightgray;
+}
+
+.about .about-3 li {
+  list-style: circle;
+  margin-bottom: 0.4em;
+}
+
+.about .award-license__description__comment {
+  font-size: 0.8rem;
+  color: rgb(180, 170, 170);
+}
+
+.about-3.careerList {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5em;
+}
+
+.career {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5em;
+}
+
+.career__img {
+  width: 45px;
+}
+
+.career__textBox {
+  margin: 0 0.4em;
+  text-align: left;
+}
+
+.textBox__name {
+}
+
+.textBox__period {
+  color: rgb(180, 170, 170);
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 48em) {
+  .about .about-1 {
+    flex-direction: column;
+    margin-bottom: 3em;
+  }
+
+  .about .about-2 {
+    width: 200px;
+    padding: 0;
+    margin-bottom: 0.8em;
+    border-bottom: 2px solid lightgray;
+  }
+
+  .about .about-3 {
+    max-width: 550px;
+    border-left: none;
+  }
+
+  .about .about-3 li {
+    margin-bottom: 0.8em;
+  }
+
+  .skillList {
+    display: flex;
+  }
+
+  .skillList .leftList {
+    margin-right: 7em;
+  }
+
+  .skillList .rightList {
+    margin-right: 3em;
+  }
+}
