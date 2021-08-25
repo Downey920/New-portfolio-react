@@ -4,9 +4,32 @@ import "./navbar.css";
 class Navbar extends Component {
   navRef = React.createRef();
 
+  componentDidMount() {
+    this.makeNavbarDark();
+  }
+
+  makeNavbarDark = () => {
+    const homeHeight = document
+      .querySelector(".home")
+      .getBoundingClientRect().height;
+    const navbarHeight = this.navRef.current.getBoundingClientRect().height;
+
+    document.addEventListener("scroll", () => {
+      if (homeHeight - navbarHeight < window.scrollY) {
+        this.navRef.current.classList.add("navbar--dark");
+      } else {
+        this.navRef.current.classList.remove("navbar--dark");
+      }
+    });
+  };
+
   handleScroll = e => {
-    const target = e.target.className.replace(/_ item/g, "");
-    document.querySelector(`.${target}`).scrollIntoView({ behavior: "smooth" });
+    const target = e.target.dataset.link;
+    if (target === ".home") {
+      window.scrollTo({ behavior: "smooth", top: 0 });
+    } else {
+      document.querySelector(target).scrollIntoView({ behavior: "smooth" });
+    }
     this.navRef.current.classList.remove("open");
   };
 
@@ -22,16 +45,32 @@ class Navbar extends Component {
           <h1 className="logo__title">Downey</h1>
         </div>
         <ul className="menu">
-          <li className="home_ item" onClick={this.handleScroll}>
+          <li
+            className="home_ item"
+            data-link=".home"
+            onClick={this.handleScroll}
+          >
             Home
           </li>
-          <li className="about_ item" onClick={this.handleScroll}>
+          <li
+            className="about_ item"
+            data-link=".about"
+            onClick={this.handleScroll}
+          >
             About
           </li>
-          <li className="skill_ item" onClick={this.handleScroll}>
+          <li
+            className="skill_ item"
+            data-link=".skill"
+            onClick={this.handleScroll}
+          >
             Skill
           </li>
-          <li className="project_ item" onClick={this.handleScroll}>
+          <li
+            className="project_ item"
+            data-link=".project"
+            onClick={this.handleScroll}
+          >
             Project
           </li>
         </ul>

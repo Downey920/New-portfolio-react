@@ -5,7 +5,16 @@ class Home extends Component {
   homeRef = React.createRef();
   componentDidMount() {
     setTimeout(() => this.homeRef.current.classList.add("show"), 300);
+    this.makeOpacity();
   }
+
+  // make HomeScreen Transparent By Scrolling
+  makeOpacity = () => {
+    const homeHeight = this.homeRef.current.getBoundingClientRect().height;
+    document.addEventListener("scroll", () => {
+      this.homeRef.current.style.opacity = 1.1 - window.scrollY / homeHeight;
+    });
+  };
 
   render() {
     return (

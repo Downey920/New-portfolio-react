@@ -8,12 +8,20 @@
   font-weight: 700;
   background: white;
   z-index: 1;
+  padding-top: 1em;
+  transition: all 250ms ease;
+}
+
+.navbar--dark {
+  padding-top: 0.5em;
+  background: white;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
   display: flex;
   align-items: center;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.4em;
 }
 
 .logo__img {
@@ -55,11 +63,16 @@
 .menubar {
   display: none;
   position: absolute;
-  top: 1.3em;
-  right: 1.4em;
+  top: 1.77em;
+  right: 1.5em;
   width: 20px;
   height: 16px;
   cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.navbar--dark .menubar {
+  top: 1.37em;
 }
 
 .menubar span {
@@ -86,6 +99,9 @@
 @media screen and (max-width: 52em) {
   .navbar {
     flex-direction: column;
+  }
+
+  .open.navbar {
     background: rgb(245, 243, 243, 0.8);
   }
 

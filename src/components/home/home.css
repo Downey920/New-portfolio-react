@@ -43,12 +43,15 @@
 
 /* Home */
 .home {
-  height: 42em;
+  position: fixed;
+  width: 100%;
+  height: 46em;
   background: url("./home.jpg") no-repeat center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  z-index: -1;
 }
 
 .home .left {
@@ -60,7 +63,7 @@
 
 .home .left .home__avatar {
   width: 20em;
-  height: 21em;
+  height: 22em;
   border-radius: 12px;
 }
 

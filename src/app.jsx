@@ -9,14 +9,38 @@ import Skill from "./components/skill/skill";
 class App extends Component {
   state = {};
 
+  componentDidMount() {
+    const sections = document.querySelectorAll("section");
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.6,
+    };
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    }, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  }
+
   render() {
     return (
       <>
         <Navbar />
         <Home />
-        <About />
-        <Skill />
-        <Project />
+        <div className="container">
+          <About />
+          <Skill />
+          <Project />
+        </div>
       </>
     );
   }
