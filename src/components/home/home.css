@@ -83,18 +83,20 @@
   color: rgb(21, 204, 21);
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 52em) {
   .home {
     flex-direction: column;
   }
 
   .home .left {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     border-radius: 50%;
-    border: 4px solid white;
+    border: 5px solid white;
   }
 
   .home .left .home__avatar {
+    width: 16em;
+    height: 16em;
     border-radius: 50%;
   }
 }

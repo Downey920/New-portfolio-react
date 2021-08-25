@@ -23,7 +23,7 @@ class Home extends Component {
           </h2>
           <ul>
             <li className="phone back-to-position to-left delay-1">
-              <i class="fas fa-phone-square-alt"></i> : 010-9458-5953
+              <i className="fas fa-phone-square-alt"></i> : 010-9458-5953
             </li>
             <li className="email back-to-position to-left delay-2">
               Email : skekfl12@naver.com

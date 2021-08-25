@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import "./skill.css";
 
 class Skill extends Component {
   render() {
-    return <section></section>;
+    return <section className="skill"></section>;
   }
 }
 

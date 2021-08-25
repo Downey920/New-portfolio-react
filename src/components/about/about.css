@@ -1,5 +1,6 @@
 .about {
-  height: 48em;
+  padding-top: 0.4em;
+  margin-bottom: 5em;
 }
 
 .about .title {
@@ -65,7 +66,7 @@
   font-size: 0.8rem;
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 52em) {
   .about .about-1 {
     flex-direction: column;
     margin-bottom: 3em;
