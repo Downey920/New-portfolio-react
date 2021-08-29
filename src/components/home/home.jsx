@@ -15,6 +15,12 @@ class Home extends Component {
     document.addEventListener("scroll", () => {
       this.homeContainerRef.current.style.opacity =
         1.1 - window.scrollY / homeHeight;
+
+      if (this.homeContainerRef.current.style.opacity > 0.85) {
+        this.homeContainerRef.current.classList.add("show");
+      } else {
+        this.homeContainerRef.current.classList.remove("show");
+      }
     });
   };
 

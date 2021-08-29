@@ -1,4 +1,92 @@
 .skill {
-  height: 52em;
-  background: rgb(247, 239, 230);
+  padding: 2.5em;
+  padding-top: 4.8em;
+  padding-bottom: 8em;
+  background: #e2e2e1;
+}
+
+.skillSet {
+  display: flex;
+  background-color: #918f8f;
+  color: #e2e1e1;
+  margin: 80px 0;
+  border-radius: 15px;
+  box-shadow: 1px 16px 16px 0px rgba(0, 0, 0, 0.45);
+}
+
+.tools__title::after,
+.etc__title::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 2px;
+  margin: 8px auto 16px;
+  background-color: #fcaa30;
+  border-radius: 50%;
+}
+
+.skillSet__left__title,
+.tools__title,
+.etc__title {
+  color: #d8d7d7;
+}
+
+.skillSet__left {
+  background-color: #686767;
+  flex-basis: 60%;
+  padding: 48px 40px;
+  border-radius: 16px 0 0 16px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  background-color: #888888;
+  height: 6px;
+  margin-top: 8.8px;
+  margin-bottom: 38px;
+  border-radius: 15px;
+}
+
+.skill__value {
+  width: 0;
+  background-color: #fcaa30;
+  height: 6px;
+  border-radius: 15px;
+  transition: all 1.8s 100ms ease-out;
+}
+
+.skillSet__right {
+  flex-basis: 40%;
+}
+
+.skillSet__right__tools {
+  background-color: #777676;
+  padding: 50px;
+  border-radius: 0 16px 0 0;
+}
+
+.skillSet__right__tools .tools__list .tools__list__item {
+  margin-bottom: 4px;
+}
+
+.skillSet__right__etc {
+  padding: 50px;
+}
+
+@media screen and (max-width: 52em) {
+  .skillSet {
+    flex-direction: column;
+  }
+
+  .skillSet__left {
+    border-radius: 16px 16px 0 0;
+  }
+
+  .skillSet__right__tools {
+    border-radius: 0;
+  }
 }
