@@ -43,61 +43,66 @@
 
 /* Home */
 .home {
-  position: fixed;
   width: 100%;
-  height: 46em;
+  height: 52em;
+  position: fixed;
+  z-index: -1;
+}
+
+.homeContainer {
+  width: 100%;
+  height: 100%;
   background: url("./home.jpg") no-repeat center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  z-index: -1;
 }
 
-.home .left {
+.homeContainer .left {
   margin-right: 0.8em;
   background: white;
   border: 8px solid white;
   border-radius: 12px;
 }
 
-.home .left .home__avatar {
+.homeContainer .left .home__avatar {
   width: 20em;
   height: 22em;
   border-radius: 12px;
 }
 
-.home .right {
+.homeContainer .right {
   font-size: 1.1rem;
 }
 
-.home .right li {
+.homeContainer .right li {
   margin-bottom: 0.2em;
 }
 
-.home .right .text {
+.homeContainer .right .text {
   padding-bottom: 0.5em;
   margin-bottom: 0.4em;
   border-bottom: 2px solid rgb(160, 154, 154);
 }
 
-.home .right i {
+.homeContainer .right i {
   font-size: 1.3rem;
   color: rgb(21, 204, 21);
 }
 
 @media screen and (max-width: 52em) {
-  .home {
+  .homeContainer {
     flex-direction: column;
   }
 
-  .home .left {
+  .homeContainer .left {
     margin-bottom: 2em;
     border-radius: 50%;
     border: 5px solid white;
   }
 
-  .home .left .home__avatar {
+  .homeContainer .left .home__avatar {
     width: 16em;
     height: 16em;
     border-radius: 50%;

@@ -43,6 +43,10 @@
   cursor: pointer;
 }
 
+.menu .item.active {
+  color: orange;
+}
+
 .menu .item::after {
   content: "";
   display: block;

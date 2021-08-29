@@ -46,31 +46,19 @@ class Navbar extends Component {
         </div>
         <ul className="menu">
           <li
-            className="home_ item"
+            className="item active"
             data-link=".home"
             onClick={this.handleScroll}
           >
             Home
           </li>
-          <li
-            className="about_ item"
-            data-link=".about"
-            onClick={this.handleScroll}
-          >
+          <li className="item" data-link=".about" onClick={this.handleScroll}>
             About
           </li>
-          <li
-            className="skill_ item"
-            data-link=".skill"
-            onClick={this.handleScroll}
-          >
+          <li className="item" data-link=".skill" onClick={this.handleScroll}>
             Skill
           </li>
-          <li
-            className="project_ item"
-            data-link=".project"
-            onClick={this.handleScroll}
-          >
+          <li className="item" data-link=".project" onClick={this.handleScroll}>
             Project
           </li>
         </ul>
