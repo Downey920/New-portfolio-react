@@ -1,4 +1,231 @@
 .project {
-  height: 52em;
+  padding: 5em 2em 10em;
   background: white;
+}
+
+.project .inner {
+}
+
+.project .inner .title {
+  margin-bottom: 1em;
+}
+
+.project .inner .categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories .category {
+  position: relative;
+  padding: 0.6em 2.4em;
+  padding-right: 5em;
+  margin-right: 1em;
+  margin-bottom: 5em;
+  border-radius: 8px;
+  color: rgb(141, 140, 140);
+  background: rgba(36, 36, 36, 0.9);
+  cursor: pointer;
+  transition: all 250ms ease-out;
+}
+
+.categories .category:hover {
+  color: rgb(255, 255, 255);
+  /* background: rgba(36, 36, 36); */
+}
+
+.categories .category.active {
+  color: rgb(255, 255, 255);
+  background: rgb(22, 22, 22);
+}
+
+.categories .category:last-child {
+  margin-right: 0;
+}
+
+.categories .category .cnt {
+  position: absolute;
+  top: -1.5em;
+  right: 1em;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.74em;
+  opacity: 0;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(105, 101, 101);
+  transition: all 250ms ease-out;
+}
+
+.categories .category:hover .cnt {
+  top: 0.42em;
+  opacity: 1;
+}
+
+.categories .category.active .cnt {
+  top: 0.42em;
+  opacity: 1;
+}
+
+.project .inner .items {
+  max-width: 900px;
+  margin: auto;
+  transition: all 300ms ease-out;
+}
+
+.items .item {
+  width: 100%;
+  /* height: 345px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  padding: 1.4em;
+  border-radius: 8px;
+  background-color: rgb(243, 240, 240);
+  box-shadow: 1px 5px 10px 0px rgba(0, 0, 0, 0.35);
+}
+
+.item__left {
+  width: 50%;
+  height: 300px;
+  opacity: 0.88;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 150ms ease-in;
+}
+
+.item__left:hover {
+  transform: scale(1.02);
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.item:hover .item__right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.item__right {
+  width: 50%;
+  height: 300px;
+  padding: 0.4em;
+  transform: translateX(-100%);
+  opacity: 0;
+  color: rgb(49, 49, 49);
+  background-color: rgb(255, 255, 255);
+  transition: all 0.8s ease-in-out;
+  overflow-y: scroll;
+}
+
+.item__right::-webkit-scrollbar {
+  width: 6px;
+}
+
+.item__right::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.item__right::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: rgb(216, 216, 216);
+}
+
+.item__right::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+.item__right .description__video {
+  display: block;
+  width: 20em;
+  margin: auto;
+}
+
+.item__right .right__description .demo,
+.item__right .right__description .github {
+  font-size: 3rem;
+  color: rgb(163, 162, 162);
+  transition: all 250ms ease-out;
+}
+
+.item__right .right__description .demo {
+  margin-right: 0.8em;
+}
+
+.item__right .right__description .github {
+  margin-right: 0.2em;
+}
+
+.item__right .right__description .demo:hover,
+.item__right .right__description .github:hover {
+  color: rgb(17, 17, 17);
+}
+
+.item.youtube .item__left {
+  background: url("./projectImg/you.png") no-repeat left top/cover;
+}
+
+.item.youtube .item__right {
+}
+
+.item .right__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(241, 82, 82);
+}
+
+.item .right__description {
+}
+
+.item .right__description .description__title {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgb(19, 18, 18);
+  border-bottom: 3px solid rgb(197, 196, 196);
+  margin-bottom: 0.6em;
+  margin-top: 1.8em;
+}
+
+.item .right__description li {
+  margin-bottom: 0.2em;
+}
+
+.item.starbucks .item__left {
+  background: url("./projectImg/starbucksImg.png") no-repeat center/cover;
+}
+
+.item.starbucks .item__right {
+}
+
+.item.starbucks .item__right .right__title {
+  color: rgb(5, 175, 5);
+}
+
+.item.carrotGame .item__left {
+  background: url("./projectImg/Carrot.png") no-repeat center/cover;
+}
+
+.item.carrotGame .item__right {
+}
+
+.item.carrotGame .item__right .right__title {
+  color: rgb(245, 97, 43);
+}
+
+@media screen and (max-width: 52em) {
+  .items .item {
+    flex-direction: column;
+  }
+
+  .item__left {
+    width: 75%;
+  }
+
+  .item__right {
+    width: 75%;
+
+    transform: translate(0, -100%);
+  }
 }
